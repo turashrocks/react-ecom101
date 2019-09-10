@@ -1,33 +1,474 @@
-.App {
+/* START - Page Animation CSS */
+
+.container {
+  position: relative;
+  background: transparent!important;
+}
+
+.page {
+  position: absolute;
+  /* left: 0px;
+  right: 0px; */
+  /* background: grey; */
+}
+
+.page-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* END - Page Animation CSS */
+
+
+/* START - Navbar */
+
+
+ul {
+  margin-block-start: 0px !important;
+  margin-block-end: 0px !important;
+  padding-inline-start: 0px !important;
+}
+
+ul li{
+  list-style-type:none !important;
+}
+nav ul {
+  margin-block-start: 0px !important;
+  margin-block-end: 0px !important;
+  padding-inline-start: 0px !important;
+}
+
+.nav-link {
+  display: block;
+  padding: none!important;
+  line-height: 2.5rem;
+}
+
+.arrow-right{
+  position: relative;
+  float: right;
+  right: 0;
+  color: #aaaaaa;
+  font-size: 12px !important;
+}
+
+li.vt-panel span{
+  font-weight: 200;
+  font-size: 0.75rem!important;
+}
+
+.vt-panel .vt-panel-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.525, 0.66, 0.495, 1.4);
+  padding-left: .5rem !important;
+}
+.vt-panel.is-expanded .vt-panel-collapse {
+  max-height: 200px;
+  padding-left: .5rem !important;
+}
+
+.aws-sld__bullets button {
+  width: 10px!important;
+  height: 10px!important;
+  background: #aaaaaa!important;
+  opacity: 0.5;
+}
+
+.aws-sld__bullets {
+  bottom: 10px !important;
+  z-index: 9!important;
+}
+
+/* a.nav-link li:hover{
+  -webkit-box-shadow: inset -17px -37px 116px -101px rgba(0,0,0,0.75);
+-moz-box-shadow: inset -17px -37px 116px -101px rgba(0,0,0,0.75);
+box-shadow: inset -17px -37px 116px -101px rgba(0,0,0,0.75);
+} */
+a{
+  text-decoration: none !important;
+  color: #000 !important;
+  padding: 0px !important;
+}
+
+.img-fluid {
+  max-width: 98%!important;
+}
+
+.vt-header-all{
+  height: 5em;
+  position: relative;
+}
+
+/* nav{
+  background: orange !important;
+  position:  relative !important;
+  display: flex !important;
+  flex-direction: column wrap !important;
+  height: 10rem !important;
+  width: 10rem !important;
+} */
+
+/* CUSTOM try */
+
+/*
+ * Sidebar
+ */
+
+ .sidebar {
+  position: fixed;
+  top: 1.75%;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-left: 2rem;
+  padding-right: 1rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #999;
+}
+
+.sidebar .nav-link.active {
+  color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+/*
+ * Content
+ */
+
+[role="main"] {
+  padding-top: 38px;
+}
+
+/*
+ * Navbar
+ */
+
+ .navbar{
+   background: #fff !important;
+ }
+
+ .bar-brand{
+   display: flex;
+   flex-direction: row wrap;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+ }
+
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  padding-left: .5rem !important;
+  font-size: 1rem;
+  color: #000 !important;
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+  border-width: 0;
+  border-radius: 0;
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+/* END CUSTOM Try */
+
+/* END - Navbar */
+
+
+/* START - VT Maincontent */
+.vt-main-right{
+  position: relative !important;
+  height: 60em !important;
+}
+
+div.aws-sld.aws-sld--organic-arrows{
+  height: 18em !important;
+  color: #000 !important;
+}
+
+div.aws-sld__content div{
+  z-index: 9!important;
+  bottom: 0;
+  right: 0 !important;
+  position: absolute;
+  background: #5c5c5c !important;
+  padding: 1% 0.7% 0% 0.7%;
+}
+
+div.aws-sld__content div p{
+  color: #fff !important;
+  font-size: 0.75rem !important;
+}
+
+/* .build-mat{
+  background: #f7fcfe !important;
+}
+
+.elec-pro{
+  background: #fcfcfc!important;
+}
+
+.interior-pro{
+  background: #f8fbf8 !important;
+} */
+/* END - VT Maincontent */
+
+
+/* START - Home Page - Product View CSS */
+
+.vt-box-header{
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+#ads {
+  margin: 30px 0 30px 0;
+ 
+}
+
+#ads .card-notify-badge {
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    background: #f2d900;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px; 
+    color: #000;
+    padding: 5px 10px;
+    font-size: 14px;
+ }
+
+#ads .card-notify-year {
+    position: absolute;
+    right: -10px;
+    top: -20px;
+    background: #ff4444;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;      
+    font-size: 14px;      
+    width: 50px;
+    height: 50px;    
+    padding: 15px 0 0 0;
+}
+
+#ads .card-detail-badge {      
+    background: #f2d900;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    color: #000;
+    padding: 5px 10px;
+    font-size: 14px;        
+}
+
+#ads .card:hover {
+    background: #fff;
+    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#ads .card-image-overlay {
+    font-size: 20px;
+}
+
+
+#ads .card-image-overlay span {
+    display: inline-block;              
+}
+
+#ads .ad-btn {
+    text-transform: uppercase;
+    width: 150px;
+    height: 40px;
+    border-radius: 80px;
+    font-size: 16px;
+    line-height: 35px;
+    text-align: center;
+    border: 3px solid #e6de08;
+    display: block;
+    text-decoration: none;
+    margin: 20px auto 1px auto;
+    color: #000;
+    overflow: hidden;        
+    position: relative;
+    background-color: #e6de08;
+}
+
+#ads .ad-btn:hover {
+    background-color: #e6de08;
+    color: #1e1717;
+    border: 2px solid #e6de08;
+    background: transparent;
+    transition: all 0.3s ease;
+    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+}
+
+#ads .ad-title h5 {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #1e1717;
+}
+
+ul.vt-services{
+  width: 100%;
+  height: 9rem; /*Total height of the Service Container*/
+  display: flex;
+  flex-flow: row wrap;
+  cursor: pointer;
+  /* background: orange; */
+}
+
+.vt-service{
+  width: 20%;
+  position: relative;
+  /* background: brown; */
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.serv-logo{
+  position: relative;
+  /* background: #e6de08; */
+  height: 6rem; /*Height of the SVG Container*/
+  width: 100%;
+  float: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.serv-logo img {
+  display: block;
+  position: relative;
+  height: 90%;
+  width: auto;
+  margin: 0 auto;
+}
+
+.serv-logo img svg path{
+  fill: #aaaaaa;
+}
+
+
+.serv-title{
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 3rem; /*Height of the SVG Text Container*/
+  /* background: palevioletred; */
+  padding-top: 5%;
+  font-weight: 200;
+  font-size: 0.75rem;
+}
+
+.vt-categories{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  height: auto;
+  width: 100%;
+}
+
+.vt-categories li{
+  width: 24.5%;
+  height: 4rem;
+  margin: 0.2rem 0.25%;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid #aaaaaa;
+  padding: 0.75%;
+  font-weight: 200;
 }
 
-.App-link {
-  color: #61dafb;
+.vt-categories li span{
+  font-size: 0.77rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.vt-categories li:hover{
+  background: #5c5c5c;
+  color: #fff;
+  box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: 800;
 }
+
+.vt-cat-ttitle{
+  position: relative;
+  float: left;
+  width: 75%;
+}
+
+.vt-cat-logo{
+  position: relative;
+  float: left;
+  width: 25%;
+}
+
+.vt-cat-logo img{
+  display: block;
+  padding-right: 2%;
+}
+/* END - Home Page - Product View CSS */
